@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Surprise Safari</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+     rel='stylesheet'>
+</head>
+
+<body>
+    <div class= "recommend">
+        <h1>Looking for a Surprise trip?<br>
+            We've got just the thing!</h1>
+        <form action="/recommend" method="post">
+            <label for="climate"><br>Select your preferred climate:</label>
+            <select id="climate" name="climate">
+                <option value="Hot">Hot</option>
+                <option value="Warm Mildly humid">Warm Mildly humid</option>
+                <option value="Tropical Temperate">Tropical Temperate</option>
+                <option value="Tropical cool">Tropical cool</option>
+                <option value="Temperate cool">Temperate cool</option>
+            </select><br><br>
+            <label for="expenditure">Select your preferred destination expenditure range:</label>
+            <select id="expenditure" name="expenditure">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br><br>
+            <label for="num_flights">Number of flights to recommend:</label>
+            <input type="number" id="num_flights" name="num_flights" min="1" max="2" value="1"><br><br>
+            <input type="submit" value="Recommend Flights">
+        </form>
+    </div>
+
+    <script src="static/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

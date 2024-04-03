@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="static/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+         rel='stylesheet'>
+    </head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a class="nav-link" href="/">Recommend Flights</a>
+        </nav>
+    </header>
+
+    <div class="recommender">
+    <h1>Recommended Flights</h1>
+        {% if flights %}
+            <ul class= "flight-list">
+               {% for flight in flights %}
+                 <li>
+                    <div class="flight-info">
+                        <p><strong>Airport:</strong> {{ flight['name'] }}</p>
+                        <p><strong>Continent:</strong> {{ flight.continent }}</p>
+                        <p><strong>Country:</strong> {{ flight.country }}</p>
+                        <p><strong>Destination:</strong> {{ flight.destinationName }}</p>
+                        <p><strong>Flight Number:</strong> {{ flight.flightNumber }}</p>
+                        <p><strong>Airline:</strong> {{ flight.airlineName }}</p>
+                        <p><strong>Terminal:</strong> {{ flight.aircraftTerminal }}</p>
+                        <p><strong>Duration:</strong> {{ flight.Duration }}</p>
+                        <p><strong>Cost:</strong> {{ flight.Cost }}</p>
+                        <p><strong>Climate:</strong> {{ flight.Climate }}</p>
+                        <p><strong>Date:</strong> {{ flight.Date }}</p>
+                        <p><strong>Time:</strong> {{ flight.Time }}</p>
+                    </div>
+                 </li>
+                 <br>
+               {% endfor %}
+            </ul>
+        {% else %}
+          <p> {{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
